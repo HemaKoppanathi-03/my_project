@@ -11,9 +11,13 @@ blocks:
         - name: 'system dependencies '
           commands:
             - checkout
-        - name: 'Job #2'
-          commands:
-            - python denpendencies
+        - name: python denpendencies
+          commands: []
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands: []
 after_pipeline:
   task:
     jobs:
