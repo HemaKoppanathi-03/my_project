@@ -8,6 +8,19 @@ blocks:
   - name: 'Block #1'
     task:
       jobs:
-        - name: 'Job #1'
+        - name: 'system dependencies '
           commands:
             - checkout
+        - name: 'Job #2'
+          commands:
+            - python denpendencies
+after_pipeline:
+  task:
+    jobs:
+      - name: unit test
+        commands: []
+      - name: integration tesing
+        commands: []
+promotions:
+  - name: Promotion 1
+    pipeline_file: pipeline_2.yml
