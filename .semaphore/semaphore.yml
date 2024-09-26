@@ -13,11 +13,7 @@ blocks:
             - checkout
         - name: python denpendencies
           commands: []
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands: []
+    dependencies: []
 after_pipeline:
   task:
     jobs:
@@ -26,5 +22,5 @@ after_pipeline:
       - name: integration tesing
         commands: []
 promotions:
-  - name: Promotion 1
+  - name: deployment
     pipeline_file: pipeline_2.yml
